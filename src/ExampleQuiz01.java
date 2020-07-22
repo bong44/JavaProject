@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class ExampleQuiz01 {
@@ -5,17 +6,36 @@ public class ExampleQuiz01 {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("단을 입력하세요: ");
-		int dan = scanner.nextInt();
+		int[] days = {31,28,31,30,31,30,31,31,30,31,30,31};
+		
+		int year = scanner.nextInt();
+		int month = scanner.nextInt();
+		int day = scanner.nextInt();
 		int sum = 0;
 		
-		System.out.println("----"+dan+"단"+"----");
+		int totalDays = 0;
 		
-		for (int i = 1; i < 10; i++) {
-			sum = dan*i;
-			System.out.println(dan+" * "+i+" = "+sum);
+		totalDays += (year - 1900) * 365;
+		
+		totalDays += (year - 1900) / 4;
+		
+		if(((year % 4 == 0)&&(year % 100 != 0))||(year % 400 == 0)) {
+			totalDays -= 1;
+			days[1] = 29;
+		} 
+		
+		System.out.println(days[1]);
+		
+		if(month != 1) {
+		for (int i = 0; i < month-1; i++) {
+			
+			sum += days[i];
+			
 		}
-		scanner.close();
+		sum += day;
 		
+		System.out.println("현재까지 "+sum+"일");
+	}
+
 	}
 }

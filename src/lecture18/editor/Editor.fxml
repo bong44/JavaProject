@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecture18.editor.EditorController">
+   <children>
+      <Button layoutX="331.0" layoutY="15.0" mnemonicParsing="false" onAction="#openAction" prefHeight="26.0" prefWidth="51.0" text="열기" />
+      <TextArea fx:id="textField" layoutX="14.0" layoutY="54.0" prefHeight="509.0" prefWidth="369.0" />
+      <Button layoutX="15.0" layoutY="563.0" mnemonicParsing="false" onAction="#saveAction" prefHeight="26.0" prefWidth="162.0" text="저장" />
+      <Button layoutX="221.0" layoutY="563.0" mnemonicParsing="false" onAction="#saveAsAction" prefHeight="26.0" prefWidth="162.0" text="새로운이름으로저장" />
+      <TextField fx:id="pathField" editable="false" layoutX="14.0" layoutY="15.0" prefHeight="26.0" prefWidth="317.0" />
+   </children>
+</AnchorPane>

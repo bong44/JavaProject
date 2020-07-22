@@ -10,9 +10,8 @@ public class Task05_02_01 {
 		double avg = 0.0;
 		
 		System.out.print("몇 명의 성적을 입력하시겠습니까? ");
-		int scannerArrary = scanner.nextInt();
 		
-		studentArrary = new int[scannerArrary]; 
+		studentArrary = new int[scanner.nextInt()]; 
 		
 		for (int i = 0; i < studentArrary.length; i++) {
 				
